@@ -6,9 +6,9 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @auther zzyy
  * @create 2020-07-09 18:09
-指的是可重复可递归调用的锁，在外层使用锁之后，在内层仍然可以使用并且不发生死锁，这样的锁就叫做可重入锁。
+指的是可重复可递归调用的锁 递归锁，在外层使用锁之后，在内层仍然可以使用并且不发生死锁，这样的锁就叫做可重入锁。
+ReentrantLock是可重入锁 synchronized 也是可重入锁 同一个线程重复获取锁 次数递加 释放锁时也要按顺序释放
 简单的来说就是：
-
 在一个synchronized修饰的方法或代码块的内部调用本类的其他synchronized修饰的方法或代码块时，是永远可以得到锁的
  */
 public class ReEntryLockDemo

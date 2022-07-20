@@ -55,7 +55,7 @@ public class CompletableFutureAPIDemo
         ).join());
 */
 
-test12();
+test9();
 
 
 
@@ -125,9 +125,11 @@ test12();
             } catch (InterruptedException e) {
             }
             System.out.println(Thread.currentThread()+" exit job1,time->"+System.currentTimeMillis());
+//            throw new RuntimeException("test");
             return 1.2;
         });
-//        thenCompose任务执行完成后，将该任务的执行结果作为方法入参然后执行指定的方法，该方法会返回一个新的CompletableFuture实例
+//        thenCompose任务执行完成后，将该任务的执行结果作为方法入参然后执行指定的方法，
+//        该方法会返回一个新的CompletableFuture实例
 //
         CompletableFuture<String> cf2= cf.thenCompose((param)->{
             System.out.println(Thread.currentThread()+" start job2,time->"+System.currentTimeMillis());

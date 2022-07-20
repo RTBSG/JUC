@@ -6,6 +6,7 @@ package com.atguigu.juc.jmm;
  */
 public class SafeDoubleCheckSingleton
 {
+//    volatile 关键字保证可见性,一致性 不保证原子性
     private volatile static SafeDoubleCheckSingleton singleton = null;
     //私有化构造方法
     private SafeDoubleCheckSingleton(){ }
