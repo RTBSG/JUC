@@ -14,7 +14,7 @@ public class InterruptDemo
 
     public static void main(String[] args)
     {
-//        查询线程中断状态 并且清除线程中断状态
+//        查询线程中断状态 并且清除线程中断状态 也就输说即使是需要中断的线程调用后也不会中断
         System.out.println(Thread.currentThread().getName()+"---"+Thread.interrupted());
         System.out.println(Thread.currentThread().getName()+"---"+Thread.interrupted());
         System.out.println("111111");
@@ -23,7 +23,7 @@ public class InterruptDemo
         System.out.println("222222");
         System.out.println(Thread.currentThread().getName()+"---"+Thread.interrupted());
         System.out.println(Thread.currentThread().getName()+"---"+Thread.interrupted());
-        m5();
+        m4();
     }
 
     public static void m5()

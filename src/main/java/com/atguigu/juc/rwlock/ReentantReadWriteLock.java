@@ -12,7 +12,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 /**
  *  ReentrantReadWriteLock 支持并发读 只支持一个写并且读写是互斥的
  *  StampedLock 支持ReentrantReadWriteLock的两种模式 支持并发读,支持一个写.
- *  同时乐观读模式 支持并发读的同时进行获取写锁 也就是读写不互斥
+ *  同时乐观读模式 支持并发读的同时进行获取写锁
  *
  * 锁降级可以保证性能,写锁降级成读锁后可以被多线程共享,至于保证可见性,锁本身的意义就保证了数据,降级没有意义
  * 锁升级 必须只要需要升级的线程持有读锁然后获取写锁才能升级,其他线程不释放自己持有的读锁是无法升级的
